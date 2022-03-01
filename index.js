@@ -36,13 +36,13 @@ app.post("/",(req,res)=>{
 
     const jsonData = JSON.stringify(data);
 
-    const url = "https://us14.api.mailchimp.com/3.0/lists/6e2f9ab5e7";
+    const url = "https://<api_key_last>.api.mailchimp.com/3.0/lists/<audience key>";
 
     
 
     const options = {
         method: "post",
-        auth: "abd1:17efc400ba8a9af2682f48c6f8544853-us14"
+        auth: "<api_key>"
     }
 
     const request = https.request(url,options, function(response){
@@ -71,7 +71,3 @@ app.listen(process.env.PORT || 80,(req,res)=>{
 
 })
 
-// audiance key : 6e2f9ab5e7.;
-// 6e2f9ab5e7.
-
-// api key : 17efc400ba8a9af2682f48c6f8544853-us14;
